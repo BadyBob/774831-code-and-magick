@@ -180,7 +180,29 @@
     <p class="setup-similar-label">Петр Петров</p>
   </div>
 </template>
-
+<script>
+  var fireballSize = 22;
+  var getFireballSpeed = function (left) {
+    return left ? 5 : 2;
+  };
+  var wizardSpeed = 3;
+  var wizardWidth = 70;
+  var getWizardHeight = function () {
+    return 1.337 * wizardWidth;
+  };
+  var getWizardX = function (width) {
+    return (width - wizardWidth) / 2;
+// width ширина конваса, wizardWidth ширина мага
+// чтобы маг спавнился по центру нужно половину ширины мага вычесть
+// из половины ширины конваса т.о. получаем выражение
+// width/2 - wizardWidth/2 = (width - wizardWidth)/2
+  };
+  var getWizardY = function (height) {
+    return height * (1/3);
+// чтобы заспавнить мага на расстоянии 2/3 от нижнего края нужно:
+// заспавнить мага на расстоянии 1/3 от верхнего края т.к. координаты считаем сверху вниз
+  };
+</script>
 <script src="js/game.js"></script>
 
 </body>
