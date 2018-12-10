@@ -1,9 +1,9 @@
 'use strict';
 
-var CLOUD_WIDTH = 420; //width convas
-var CLOUD_HEIGHT = 270; //height convas
-var CLOUD_X = 100; //x start convas
-var CLOUD_Y = 10; //y start convas
+var CLOUD_WIDTH = 420;
+var CLOUD_HEIGHT = 270;
+var CLOUD_X = 100;
+var CLOUD_Y = 10;
 var GAP = 10;
 var FONT_GAP = 16;
 var TEXT_WIDTH = 50;
@@ -49,11 +49,11 @@ window.renderStatistics = function(ctx, names, times) {
     ctx.fillText(score, BAR_HEIGHT + i * (barWidth + TEXT_WIDTH), - mult * times[i] + 235);
 
     ctx.fillText(names[i], BAR_HEIGHT + i * (barWidth + TEXT_WIDTH), CLOUD_HEIGHT - GAP);
-      if (names[i] === 'Вы') {
-        ctx.fillStyle = 'rgba(255, 0, 0, 1)';
-      } else {
-        ctx.fillStyle = 'rgba(0, 0, '+ Math.random() * 255 +', 1)';
-      }
+    if (names[i] === 'Вы') {
+      ctx.fillStyle = 'rgba(255, 0, 0, 1)';
+    } else {
+      ctx.fillStyle = 'rgba(0, 0, '+ Math.random() * 255 +', 1)';
+    }
     ctx.fillRect(BAR_HEIGHT + i * (barWidth + TEXT_WIDTH), CLOUD_HEIGHT - GAP - FONT_GAP, barWidth, - mult * times[i]);
   }
 };
