@@ -88,7 +88,6 @@ var similarWizardTemplate = document.querySelector('#similar-wizard-template')
 //   var randomIndex = Math.floor(Math.random() * EYE_COLORS.length);
 //   return EYE_COLORS[randomIndex];
 // }
-// console.log(getEyeColor());
 
 var cloneWizard = function () {
   for (var i = 0; i < COUNT_WIZARDS; i++) {
